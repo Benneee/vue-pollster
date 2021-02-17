@@ -119,4 +119,42 @@ body {
     transform: scale(1);
   }
 }
+
+.mb-2 {
+  margin-bottom: 1.5rem;
+}
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.mb-3 {
+  margin-bottom: 2rem;
+}
+
+.my-2 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.mr {
+  margin-right: 1rem;
+}
+.ml {
+  margin-left: 1rem;
+}
+.btn-vote {
+  padding: 0.3rem;
+  color: #fff;
+  border-radius: 3px;
+  border-color: grey;
+  background-color: rgb(70, 176, 70);
+}
+
+.btn-results {
+  padding: 0.3rem;
+  color: #fff;
+  border-radius: 3px;
+  border-color: #fff;
+  background-color: rgb(167, 60, 60) ;
+}
 </style>
