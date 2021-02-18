@@ -100,6 +100,13 @@ export default {
         });
     },
 
+    goToResultsDetail(quesId) {
+      this.$router.push({
+        name: 'Results',
+        params: { pollId: quesId },
+      });
+    },
+
     voteForQuestion() {
       const newVote = {
         choice_id: this.selectedChoiceId,
@@ -121,9 +128,7 @@ export default {
                 type: 'success',
               });
             }
-            this.$router.push({
-              name: 'Results',
-            });
+            this.goToResultsDetail(newVote.questionId);
           })
           .catch((error) => {
             console.log('error: ', error);

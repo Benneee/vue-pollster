@@ -4,7 +4,7 @@
     <button class="btn btn-vote mr" @click="goToQuestionDetail">
       Vote Now
     </button>
-    <button class="btn btn-results">Results</button>
+    <button class="btn btn-results" @click="goToResultsDetail">Results</button>
   </div>
 </template>
 
@@ -15,10 +15,16 @@ export default {
   props: ['question'],
   methods: {
     goToQuestionDetail() {
-      console.log('Q-ID: ', this.question.id);
       this.$router.push({
         name: 'PollDetail',
         params: { questionId: this.question.id },
+      });
+    },
+
+    goToResultsDetail() {
+      this.$router.push({
+        name: 'Results',
+        params: { pollId: this.question.id },
       });
     },
   },

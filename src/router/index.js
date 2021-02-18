@@ -30,7 +30,7 @@ const routes = [
     component: () => import('../views/PollDetail.vue'),
   },
   {
-    path: '/results',
+    path: '/results/:pollId',
     name: 'Results',
     component: () => import('../views/Results.vue'),
   },
