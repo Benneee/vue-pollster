@@ -25,7 +25,7 @@ export default {
     90deg,
     rgba(255, 249, 0, 1) 40%,
     rgba(2, 0, 36, 1) 30%,
-    rgba(163, 27, 27, 1) 29%
+    rgb(167, 60, 60) 29%
   );
   padding: 1rem;
   color: #fff;

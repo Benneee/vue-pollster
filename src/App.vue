@@ -33,6 +33,14 @@ body {
   text-decoration: underline;
 }
 
+a:-webkit-any-link {
+  color: #fff;
+  text-decoration: none;
+}
+a:-webkit-any-link:hover {
+  text-decoration: underline;
+}
+
 .sk-chase {
   width: 40px;
   height: 40px;
@@ -117,6 +125,140 @@ body {
   100%,
   0% {
     transform: scale(1);
+  }
+}
+
+.mb-2 {
+  margin-bottom: 1.5rem;
+}
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.mb-3 {
+  margin-bottom: 2rem;
+}
+
+.mt-2 {
+  margin-top: 1.5rem;
+}
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.mt-3 {
+  margin-top: 2rem;
+}
+
+.my-2 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.mr {
+  margin-right: 1rem;
+}
+.ml {
+  margin-left: 1rem;
+}
+.btn-vote {
+  color: #fff;
+  background-color: rgb(70, 176, 70);
+}
+
+.btn-vote:hover {
+  color: #fff;
+  background-color: rgb(26, 101, 26);
+}
+
+.btn-results {
+  background-color: rgb(167, 60, 60);
+  color: #fff;
+}
+
+.btn-results:hover:not(button:disabled) {
+  color: #fff;
+  background-color: rgb(152, 25, 25);
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.85rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.btn-grey {
+  color: #fff;
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+button:disabled,
+button[disabled] {
+  border: 1px solid #999999;
+  background-color: #ac8181;
+  color: #fff;
+}
+
+.btn:hover {
+  text-decoration: none;
+}
+
+.polls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.polls-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 71vw;
+}
+
+.card {
+  width: 35vw;
+  height: auto;
+  padding: 1.25rem 1rem 2.2rem 1rem;
+  box-shadow: 0 1.5px 3px 0 rgba(182, 11, 11, 0.2);
+  transition: 0.3s;
+  background-color: rgb(228, 208, 208);
+}
+
+.card h1 {
+  border-bottom: 3px solid rgb(206, 48, 48);
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 648px) {
+  .card {
+    width: 80vw;
+    height: auto;
   }
 }
 </style>
