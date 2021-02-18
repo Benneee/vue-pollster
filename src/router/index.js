@@ -29,12 +29,12 @@ const routes = [
     component: () => import('../views/PollDetail.vue')
   },
   {
-    path: 'results',
+    path: '/results',
     name: 'Results',
     component: () => import('../views/Results.vue')
   },
   {
-    path: 'manage-polls',
+    path: '/manage-polls',
     name: 'Manage Polls',
     component: () => import('../views/ManagePolls.vue')
   }

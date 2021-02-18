@@ -143,18 +143,47 @@ body {
   margin-left: 1rem;
 }
 .btn-vote {
-  padding: 0.3rem;
   color: #fff;
-  border-radius: 3px;
-  border-color: grey;
   background-color: rgb(70, 176, 70);
 }
 
-.btn-results {
-  padding: 0.3rem;
+.btn-vote:hover {
   color: #fff;
-  border-radius: 3px;
-  border-color: #fff;
-  background-color: rgb(167, 60, 60) ;
+  background-color: rgb(26, 101, 26);
+}
+
+.btn-results {
+  background-color: rgb(167, 60, 60);
+  color: #fff;
+}
+
+.btn-results:hover {
+  color: #fff;
+  background-color: rgb(152, 25, 25);
+}
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.85rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.btn:hover {
+  text-decoration: none;
 }
 </style>

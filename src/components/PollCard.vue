@@ -1,16 +1,24 @@
 <template>
   <div class="card">
-    <h3 class="mb-3">What is your favourite front-end framework?</h3>
-    <button class="btn-vote mr">Vote Now</button>
-    <button class="btn-results">Results</button>
+    <h3 class="mb-3">{{ question.question_text }}</h3>
+    <button class="btn btn-vote mr" @click="goToQuestionDetail">
+      Vote Now
+    </button>
+    <button class="btn btn-results">Results</button>
   </div>
 </template>
 
 <script>
 export default {
   name: 'PollCard',
-  components: {}
-}
+  components: {},
+  props: ['question'],
+  methods: {
+    goToQuestionDetail() {
+      console.log('Q-ID: ', this.question.id);
+    },
+  },
+};
 </script>
 
 <style>
@@ -36,8 +44,7 @@ export default {
 @media screen and (max-width: 648px) {
   .card {
     width: 80vw;
-    height: 28vh;
+    height: 20vh;
   }
 }
-
 </style>
