@@ -222,4 +222,43 @@ button[disabled] {
 .btn:hover {
   text-decoration: none;
 }
+
+.polls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.polls-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 71vw;
+}
+
+.card {
+  width: 35vw;
+  height: auto;
+  padding: 1.25rem 1rem 2.2rem 1rem;
+  box-shadow: 0 1.5px 3px 0 rgba(182, 11, 11, 0.2);
+  transition: 0.3s;
+  background-color: rgb(228, 208, 208);
+}
+
+.card h1 {
+  border-bottom: 3px solid rgb(206, 48, 48);
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 648px) {
+  .card {
+    width: 80vw;
+    height: auto;
+  }
+}
 </style>
