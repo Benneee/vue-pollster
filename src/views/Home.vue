@@ -1,16 +1,16 @@
 <template>
-   <div class="home">
+  <div class="home">
     <div class="card">
       <h1>Welcome to Pollster</h1>
 
       <p>
         Find a collection of polls available by navigating to
-      <router-link to="/polls">Polls</router-link>
+        <router-link to="/polls">Polls</router-link>
       </p>
 
       <p>
         Manage polls by navigating to
-      <router-link to="/manage-polls">Manage Polls</router-link>
+        <router-link to="/manage-polls">Manage Polls</router-link>
       </p>
     </div>
   </div>
@@ -23,7 +23,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url('../assets/logo.png');
+  /* background-image: url('../assets/logo.png'); */
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -31,7 +31,7 @@
 .card {
   width: 50vw;
   text-align: center;
-  height: 20vh;
+  height: auto;
   padding: 1rem;
   box-shadow: 0 4px 8px 0 rgba(182, 11, 11, 0.2);
   transition: 0.3s;

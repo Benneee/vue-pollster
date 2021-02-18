@@ -16,6 +16,10 @@ export default {
   methods: {
     goToQuestionDetail() {
       console.log('Q-ID: ', this.question.id);
+      this.$router.push({
+        name: 'PollDetail',
+        params: { questionId: this.question.id },
+      });
     },
   },
 };
@@ -25,7 +29,7 @@ export default {
 .card {
   width: 30vw;
   /* text-align: center; */
-  height: 98px;
+  height: auto;
   padding: 1.25rem 1rem 2.2rem 1rem;
   box-shadow: 0 1.5px 3px 0 rgba(182, 11, 11, 0.2);
   transition: 0.3s;
@@ -44,7 +48,7 @@ export default {
 @media screen and (max-width: 648px) {
   .card {
     width: 80vw;
-    height: 20vh;
+    height: auto;
   }
 }
 </style>

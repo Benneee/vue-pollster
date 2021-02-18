@@ -33,6 +33,14 @@ body {
   text-decoration: underline;
 }
 
+a:-webkit-any-link {
+  color: #fff;
+  text-decoration: none;
+}
+a:-webkit-any-link:hover {
+  text-decoration: underline;
+}
+
 .sk-chase {
   width: 40px;
   height: 40px;
@@ -131,6 +139,17 @@ body {
   margin-bottom: 2rem;
 }
 
+.mt-2 {
+  margin-top: 1.5rem;
+}
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.mt-3 {
+  margin-top: 2rem;
+}
+
 .my-2 {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -157,9 +176,13 @@ body {
   color: #fff;
 }
 
-.btn-results:hover {
+.btn-results:hover:not(button:disabled) {
   color: #fff;
   background-color: rgb(152, 25, 25);
+}
+
+.btn-block {
+  width: 100%;
 }
 
 .btn {
@@ -181,6 +204,19 @@ body {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   font-family: 'Josefin Sans', sans-serif;
+}
+
+.btn-grey {
+  color: #fff;
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+button:disabled,
+button[disabled] {
+  border: 1px solid #999999;
+  background-color: #ac8181;
+  color: #fff;
 }
 
 .btn:hover {

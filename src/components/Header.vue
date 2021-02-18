@@ -7,7 +7,7 @@
 
     <div class="links">
       <router-link to="/polls">Polls</router-link>
-      <router-link to="/poketypes">Manage Polls</router-link>
+      <router-link to="/manage-polls">Manage Polls</router-link>
     </div>
   </header>
 </template>
