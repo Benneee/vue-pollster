@@ -42,13 +42,15 @@ export default {
         .then((res) => {
           if (res.data) {
             this.questions = res.data;
-            console.log('q: ', this.questions);
+            // console.log('q: ', this.questions);
             this.isLoading = false;
           }
         })
         .catch((error) => {
-          console.log('error: ', error);
-          this.isLoading = false;
+          if (error) {
+            // console.log('error: ', error);
+            this.isLoading = false;
+          }
         });
     },
   },

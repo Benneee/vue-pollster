@@ -211,7 +211,7 @@ export default {
     showQuestionsForUpdateOrDelete() {
       this.forChoices = false;
       this.forUpdateOrDelete = !this.forUpdateOrDelete;
-      console.log('for update/delete');
+      // console.log('for update/delete');
     },
 
     showForNewQuestion() {
@@ -224,7 +224,7 @@ export default {
     showForNewChoices() {
       this.forUpdateOrDelete = false;
       this.forChoices = !this.forChoices;
-      console.log('for choices');
+      // console.log('for choices');
     },
     getAllPolls() {
       this.isLoading = true;
@@ -234,13 +234,15 @@ export default {
           if (res.data) {
             this.questions = res.data;
             this.questions = this.questions.reverse();
-            // console.log('q: ', this.questions);
+            // // console.log('q: ', this.questions);
             this.isLoading = false;
           }
         })
         .catch((error) => {
-          console.log('error: ', error);
-          this.isLoading = false;
+          if (error) {
+            // console.log('error: ', error);
+            this.isLoading = false;
+          }
         });
     },
 
@@ -248,7 +250,7 @@ export default {
       if (questionSelected) {
         this.selectedQuestionForChoices = questionSelected;
         this.show('add-choice');
-        // console.log('q: ', questionSelected);
+        // // console.log('q: ', questionSelected);
       }
     },
 
@@ -287,7 +289,7 @@ export default {
 
     sendQuestionForDeletion(questionForDeletion) {
       if (questionForDeletion !== null) {
-        // console.log('del-Q: ', questionForDeletion);
+        // // console.log('del-Q: ', questionForDeletion);
         const { id } = questionForDeletion;
         axios
           .delete(`http://127.0.0.1:8001/api/v1/polls/questions/${id}/`)
@@ -304,12 +306,14 @@ export default {
             }
           })
           .catch((error) => {
-            console.log('error: ', error);
-            this.hide('delete-question');
-            Vue.$toast.open({
-              message: 'An error occured',
-              type: 'error',
-            });
+            if (error) {
+              // console.log('error: ', error);
+              this.hide('delete-question');
+              Vue.$toast.open({
+                message: 'An error occured',
+                type: 'error',
+              });
+            }
           });
       }
     },
@@ -328,7 +332,7 @@ export default {
                 this.hide('new-question');
                 this.question_text = '';
                 this.pub_date = '';
-                console.log('newQ: ', res);
+                // console.log('newQ: ', res);
                 Vue.$toast.open({
                   message: res.data.message,
                   type: 'success',
@@ -338,7 +342,7 @@ export default {
             })
             .catch((error) => {
               if (error) {
-                console.log('error: ', error);
+                // console.log('error: ', error);
                 if (error['pub_date']) {
                   Vue.$toast.open({
                     message: `Publish date: ${error['pub_date']}`,
@@ -387,7 +391,9 @@ export default {
               }
             })
             .catch((error) => {
-              console.log('error: ', error);
+              if (error) {
+                // console.log('error: ', error);
+              }
             });
         }
       }
@@ -401,7 +407,7 @@ export default {
       if (payload.pub_date) {
         payload.pub_date = payload.pub_date + 'T00:00';
       }
-      console.log('payload: ', payload);
+      // console.log('payload: ', payload);
       this.sendQuestionPayload(payload);
     },
 
@@ -410,7 +416,7 @@ export default {
         questionId: this.selectedQuestionForChoices.id,
         choice_text: this.choice_text,
       };
-      console.log('payload for new choice: ', payload);
+      // console.log('payload for new choice: ', payload);
       this.sendNewChoicePayload(payload);
     },
 
@@ -430,7 +436,7 @@ export default {
         questionId: this.selectedQuestionForUpdate.id,
         question_text: this.updatedQuestionText,
       };
-      console.log('payload-for-update: ', payload);
+      // console.log('payload-for-update: ', payload);
       this.sendForUpdate(payload);
     },
   },
