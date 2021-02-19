@@ -487,7 +487,7 @@ export default {
     margin-bottom: 0.5rem;
   }
 }
-
+/*
 @media screen and (max-width: 768px) {
   .pollcards {
     margin-top: 1.5rem;
@@ -496,5 +496,5 @@ export default {
     grid-gap: 20px;
     max-width: 70%;
   }
-}
+} */
 </style>
