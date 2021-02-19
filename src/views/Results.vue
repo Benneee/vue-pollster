@@ -67,15 +67,17 @@ export default {
         .get(`http://127.0.0.1:8001/api/v1/polls/questions/${pollId}/result/`)
         .then((res) => {
           if (res.data) {
-            console.log('deets: ', res.data);
+            // console.log('deets: ', res.data);
             this.resultDetail = { ...res.data };
             this.isLoading = false;
           }
         })
         .catch((error) => {
-          console.log('error: ', error);
-          this.isLoading = false;
-          return;
+          if (error) {
+            // console.log('error: ', error);
+            this.isLoading = false;
+            return;
+          }
         });
     },
 

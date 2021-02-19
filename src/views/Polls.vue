@@ -42,13 +42,15 @@ export default {
         .then((res) => {
           if (res.data) {
             this.questions = res.data;
-            console.log('q: ', this.questions);
+            // console.log('q: ', this.questions);
             this.isLoading = false;
           }
         })
         .catch((error) => {
-          console.log('error: ', error);
-          this.isLoading = false;
+          if (error) {
+            // console.log('error: ', error);
+            this.isLoading = false;
+          }
         });
     },
   },
@@ -81,7 +83,7 @@ export default {
     flex-direction: column;
   }
 }
-
+/*
 @media screen and (max-width: 768px) {
   .pollcards {
     margin-top: 1.5rem;
@@ -90,5 +92,5 @@ export default {
     grid-gap: 20px;
     max-width: 70%;
   }
-}
+} */
 </style>

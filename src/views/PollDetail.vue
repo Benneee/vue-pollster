@@ -90,13 +90,15 @@ export default {
         .then((res) => {
           if (res.data) {
             this.questionDetail = { ...res.data };
-            console.log('q: ', this.questionDetail);
+            // console.log('q: ', this.questionDetail);
             this.isLoading = false;
           }
         })
         .catch((error) => {
-          console.log('error: ', error);
-          this.isLoading = false;
+          if (error) {
+            // console.log('error: ', error);
+            this.isLoading = false;
+          }
         });
     },
 
@@ -131,11 +133,13 @@ export default {
             this.goToResultsDetail(newVote.questionId);
           })
           .catch((error) => {
-            console.log('error: ', error);
-            Vue.$toast.open({
-              message: 'An error occurred',
-              type: 'error',
-            });
+            if (error) {
+              // console.log('error: ', error);
+              Vue.$toast.open({
+                message: 'An error occurred',
+                type: 'error',
+              });
+            }
           });
       }
     },
