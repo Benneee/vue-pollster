@@ -4,6 +4,9 @@
 ```
 npm install
 ```
+Clone this [project](https://github.com/Benneee/polls-api) so that the API can work
+Be sure to install all dependencies though.
+I'll deploy it sometime soon, thanks.
 
 ### Compiles and hot-reloads for development
 ```
